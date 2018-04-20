@@ -38,6 +38,16 @@ maildev [options]
   --silent
 ```
 
+## Default docker image usage
+
+You can run following command to run maildev with default settings:
+  - SMTP port set to `25`, mounted on `1025`
+  - HTTP port set to `1080`
+
+```
+$ docker run -p 1080:1080 -p 1025:25 --name maildev blackholegalaxy/maildev -w 8888 --outgoing-host anyhost --outgoing-port 587
+```
+
 ## Use CLI in docker
 
 By default, MailDev docker will run with the following arguments:
@@ -48,6 +58,6 @@ By default, MailDev docker will run with the following arguments:
 You can use any CLI argument using the following syntax:
 
 ```
-$ docker run -p 1080:8888 --name maildev djfarrelly/maildev -w 8888 --outgoing-host anyhost --outgoing-port 587
+$ docker run -p 1080:8888 --name maildev blackholegalaxy/maildev -w 8888 --outgoing-host anyhost --outgoing-port 587
 ```
 
