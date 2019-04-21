@@ -1,8 +1,8 @@
-FROM node:6-alpine
+FROM node:10-alpine
 
 LABEL maintainer="blackholegalaxy"
 
-RUN npm i -g maildev@1.0.0-rc3
+RUN npm i -g maildev@1.0.0
 
 EXPOSE 1080 25
 
